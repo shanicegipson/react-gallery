@@ -6,13 +6,11 @@ class GalleryItem extends Component {
     
 
     render() {
-
-        let imgPath = this.props.path;
         
         return (
             <div className ="galleryitem">
                 <p>{this.props.id}</p>
-                <img>{this.props.path}</img>
+                <img>{this.props.path} alt="text"</img>
                 <p>{this.props.description}</p>
                 <p>{this.props.likes}</p>
             </div>

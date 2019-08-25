@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import GalleryList from '../GalleryList';
+import getGalleryItem from '../GalleryItem';
 
 class App extends Component {
 
@@ -41,7 +43,7 @@ class App extends Component {
         <br/>
         <p>Gallery goes here</p>
 
-        <GalleryList getGalleryCallback={this.getGalleryItem} list={this.state.galleryList} />
+        <GalleryList list={this.state.galleryList} getGalleryCallback={this.getGalleryItem} />
         
   
       </div>

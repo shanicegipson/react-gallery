@@ -20,7 +20,7 @@ class GalleryItem extends Component {
       }
     
     clickLikeHandler = (event) => {
-        this.putLikeGalleryItem(this.props.itemData.id);
+        this.setState({likes: 0});
     }
 
     render() {

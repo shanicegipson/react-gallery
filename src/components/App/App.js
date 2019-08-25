@@ -54,25 +54,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// <div className="row">
-//           <div class="column">
-//             <img src="images/TwinsBirth.jpg" alt="text"/>
-//             <img src="images/BryndeeandI.jpg" alt="text"/>
-//             <img src="images/favtwinphoto.jpg" alt="text"/>
-//           </div>
-//           <div class="column">
-//             <img src="images/TreaseandI.jpg" alt="text"/>
-//             <img src="images/mykids.jpg" alt="text"/>
-//             <img src="images/momandnathan.jpg" alt="text"/>
-//           </div>
-//           <div class="column">
-//             <img src="images/Grandma.jpg" alt="text"/>
-//             <img class="fix" src="images/meandbrothers.jpg" alt="text"/>
-//             <img src="images/shamekaandI.jpg" alt="text"/>
-//           </div>
-//           <div class="column">
-//             <img src="images/TaylorandI.jpg" alt="text"/>
-//             <img src="images/pammichaelandI.jpg" alt="text"/>
-//           </div>

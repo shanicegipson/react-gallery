@@ -21,3 +21,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+img {
+  width: 20%;
+}
+
+.column {
+  padding: 10px;
+}
+
+.fix{
+  rotate: left;
+}

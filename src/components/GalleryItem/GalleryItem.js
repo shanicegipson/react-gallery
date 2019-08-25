@@ -19,21 +19,20 @@ class GalleryItem extends Component {
           });
       }
     
-    clickLikeHandler = (event) => {
-        this.setState({likes: 0});
-    }
+    // clickLikeHandler = (event) => {
+    //     this.setState({likes: 0});
+    // }
 
     render() {
 
-        console.log(this.props.itemData.path);
+        const description = this.props.itemData.description;
         
         return (
             <div className ="galleryitem">
                 <p>{this.props.itemData.id}</p>
-                <img src={this.props.itemData.path} alt="text"/>
-                <p>{this.props.itemData.description}</p>
+                <img src={this.props.itemData.path} onClick ={description} alt="text"/>
                 <p>{this.props.itemData.likes}</p>
-                <button onClick={this.clickLikeHandler}>Like</button>
+                <button>Like</button>
             </div>
         );
     }

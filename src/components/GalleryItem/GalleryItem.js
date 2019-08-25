@@ -3,6 +3,20 @@ import axios from 'axios';
 
 
 class GalleryItem extends Component {
+
+    putLikeGalleryItem (galleryId) {
+        axios({
+          method: 'PUT',
+          url: `/gallery/like/${galleryId}`,
+        })
+        .then((response) => {
+          this.props.getGalleryCallback()
+        })
+        .catch ((err) => {
+          console.log('In PUT error', err);
+          alert('PUT Error')
+        });
+      }
     
 
     render() {

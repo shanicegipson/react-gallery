@@ -23,8 +23,11 @@
 }
 
 img {
-  width: 20%;
+  width: 250px;
+  height: 300px;
+  border: 10px black;
 }
+
 
 .column {
   padding: 10px;
@@ -32,4 +35,14 @@ img {
 
 .fix{
   rotate: left;
+}
+
+.galleryitem {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  display: inline-block;
+  border-radius:16px;
+  margin: 50px;
+  box-shadow: 0 0 30px teal;
 }

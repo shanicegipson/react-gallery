@@ -40,9 +40,21 @@ img {
 .galleryitem {
   width: 500px;
   height: 500px;
-  background-size: cover;
+  background-size: contain;
   display: inline-block;
-  border-radius:16px;
+  border-radius:45px;
   margin: 50px;
   box-shadow: 0 0 30px teal;
+  background-color: gray;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 15px teal;
+}
+
+#description {
+  color: rgb(252, 252, 252);
 }

@@ -43,7 +43,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <p>Shanice's Gallery of Important Life Moments</p>
+        <h2>Shanice's Gallery of Important Life Moments</h2>
 
         <GalleryList list={this.state.galleryList} getGalleryCallback={this.getGalleryItem} />
         

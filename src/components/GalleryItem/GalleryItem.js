@@ -4,7 +4,14 @@ import axios from 'axios';
 console.log('on gallery Item');
 
 class GalleryItem extends Component {
+      state = {
+        showDescription: false,
+      }
 
+  
+
+  
+     
     putLikeGalleryItem (galleryId) {
         axios({
             method: 'PUT',
@@ -17,25 +24,35 @@ class GalleryItem extends Component {
             console.log('In PUT error', err);
             alert('PUT Error')
           });
+      };
+
+      
+
+      toggleDescription = (event) => {
+        event.preventDefault()
+
+        this.setState({
+          showDescription: !this.state.showDescription
+        })
+        
       }
     
-    // clickLikeHandler = (event) => {
-    //     this.setState({likes: 0});
-    // }
 
     render() {
-
         const description = this.props.itemData.description;
+        console.log(this.props.itemData.path);
         
         return (
-            <div className ="galleryitem">
-                <p>{this.props.itemData.id}</p>
-                <img src={this.props.itemData.path} onClick ={description} alt="text"/>
-                <p>{this.props.itemData.likes}</p>
-                <button>Like</button>
-            </div>
+          <div className ="galleryitem">
+            <p>{this.props.itemData.id}</p>
+            {this.state.showDescription && <p className='description'>{description}</p>}
+            <img src={this.props.itemData.path} onClick ={this.toggleDescription} alt="text"/>
+            <p>{this.props.itemData.likes}</p>
+            <button>Like</button>
+        </div>
+
         );
     }
-}
 
+  }
 export default GalleryItem;

@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: teal;
   height: 70px;
   padding: 20px;
   color: white;
@@ -52,7 +52,7 @@ h2 {
   font-size: 60px;
   font-weight: bold;
   font-family: 'Pacifico', cursive;
-  text-shadow: 15px teal;
+  color: rgb(124, 228, 228);
 }
 
 #description {

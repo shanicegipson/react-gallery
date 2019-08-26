@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+
 // import './bootstrap.min.css'
 
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
         <h2>Shanice's Gallery of Important Life Moments</h2>
 
         <GalleryList list={this.state.galleryList} getGalleryCallback={this.getGalleryItem} />
+        
         
   
       </div>

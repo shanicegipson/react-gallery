@@ -5,10 +5,10 @@ console.log('on gallery Item');
 
 class GalleryItem extends Component {
       state = {
-        showDescription: false,
+        showDescription: true,
+        likes: 0,
       }
 
-  
 
   
      
@@ -25,30 +25,37 @@ class GalleryItem extends Component {
             alert('PUT Error')
           });
       };
-
+      clickLike =(event) => {
+        this.setState({likes: this.state.likes +1});
+      }
       
 
       toggleDescription = (event) => {
         event.preventDefault()
 
-        this.setState({
-          showDescription: !this.state.showDescription
-        })
+        const description = this.props.itemData.description;
+        const image = this.props.itemData.path;
+
+        if (this.state.showDescription !== false ){
+          this.setState({description});
+        } else if(this.state.showDescription === true ) {
+            this.setState({image});
+        }  
         
+        console.log(description);
+        console.log(image);
       }
-    
 
     render() {
-        const description = this.props.itemData.description;
-        console.log(this.props.itemData.path);
+        
         
         return (
           <div className ="galleryitem">
             <p>{this.props.itemData.id}</p>
-            {this.state.showDescription && <p className='description'>{description}</p>}
+            {/* {this.state.showDescription && <p className='description'>{description}</p>} */}
             <img src={this.props.itemData.path} onClick ={this.toggleDescription} alt="text"/>
             <p>{this.props.itemData.likes}</p>
-            <button>Like</button>
+            <button onClick={this.clickLike}>Like</button>
         </div>
 
         );
